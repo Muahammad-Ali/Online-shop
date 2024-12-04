@@ -47,13 +47,13 @@
 </head>
 <body data-instant-intensity="mousedown">
 
-<div class="bg-black top-header ">
+<div class=" top-header ">
 	<div class="container ">
 		<div class="row align-items-center py-3 d-none d-lg-flex justify-content-between">
 			<div class="col-lg-4 logo">
 
 			</div>
-			<div class="col-lg-6 col-6 text-left  d-flex justify-content-end align-items-center">
+			<div class="col-lg-6 col-6 text-left  d-flex justify-content-center align-items-center">
 				<a href="account.php" class="nav-link text-dark">My Account</a>
 				<form action="">
 					<div class="input-group">
@@ -151,6 +151,7 @@
       	</nav>
   	</div>
 </header>
+
 
 
 <main>
