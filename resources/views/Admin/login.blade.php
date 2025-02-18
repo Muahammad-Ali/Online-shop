@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Laravel Shop :: Administrative Panel</title>
+		<title>Muhammad Shop :: Administrative Panel</title>
 		<!-- Google Font: Source Sans Pro -->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
 		<!-- Font Awesome -->
@@ -16,7 +16,7 @@
 		<div class="login-box">
 			<!-- /.login-logo -->
 			 @include('admin.message')
-			<div class="card card-outline card-primary">
+			<div class="card card-outline card-primary ">
 			  	<div class="card-header text-center">
 					<a href="#" class="h3">Administrative Panel</a>
 			  	</div>
@@ -64,7 +64,7 @@
 					</form>
 		  			<p class="mb-1 mt-3">
 				  		<a href="forgot-password.html">I forgot my password</a>
-					</p>					
+					</p>
 			  	</div>
 			  	<!-- /.card-body -->
 			</div>

@@ -58,7 +58,7 @@ class ShopController extends Controller
 
            }
            $products = $products->orderBy('id','DESC');
-           $products = $products->get();
+           $products = $products->paginate(6);
            $data['categories'] = $categories;
            $data['brands'] = $brands;
            $data['products'] = $products;
@@ -69,5 +69,16 @@ class ShopController extends Controller
            $data['priceMin'] = intval($request->get('price_min'));
 
            return view("frontend.shop",$data);
+    }
+
+    public function product($slug){
+            //   echo $slug;
+            $product = Product::where('slug',$slug)->with('product_images')->first();
+            if($product == null){
+                    abort(404);
+            }
+            $data['product'] = $product;
+
+            return view('frontend.products',$data);
     }
 }

@@ -49,8 +49,9 @@
 
 <div class=" top-header ">
 	<div class="container ">
-		<div class="row align-items-center py-3 d-none d-lg-flex justify-content-between">
+		<div class="row align-items-center py-3 d-none d-lg-flex justify-content-between  ">
 			<div class="col-lg-4 logo">
+                <img class="col-lg-4 d-flex img-fluid" src="{{asset('front-assets/logo.png')}}" alt="Logo" />
 
 			</div>
 			<div class="col-lg-6 col-6 text-left  d-flex justify-content-center align-items-center">
@@ -68,7 +69,7 @@
 	</div>
 </div>
 
-<header class="bg-dark">
+<header class="bg-black">
 	<div class="container">
 		<nav class="navbar navbar-expand-xl" id="navbar">
 			<a href="index.php" class="text-decoration-none mobile-logo">
@@ -79,8 +80,8 @@
       			<!-- <span class="navbar-toggler-icon icon-menu"></span> -->
 				  <i class="navbar-toggler-icon fas fa-bars"></i>
     		</button>
-    		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-      			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+    		<div class="collapse navbar-collapse" id="navbarSupportedContent ">
+      			<ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
         			<!-- <li class="nav-item">
           				<a class="nav-link active" aria-current="page" href="index.php" title="Products">Home</a>
         			</li> -->
@@ -157,15 +158,6 @@
 <main>
    @yield('content')
 </main>
-
-
-
-
-
-
-
-
-
 <footer class="bg-dark mt-5">
 	<div class="container pb-5 pt-3">
 		<div class="row">

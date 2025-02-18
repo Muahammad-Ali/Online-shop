@@ -1,4 +1,4 @@
-<?php
+    <?php
 
 use Illuminate\Support\Facades\Route;
 // use App\Http\Controllers\admin\AdminLogController;
@@ -30,7 +30,7 @@ use Illuminate\Http\Request;
 
 Route::get('/', [FrontController::class,'index'])->name('front.home');
 Route::get('/shop/{categorySlug?}/{subCategorySlug?}', [ShopController::class,'index'])->name('shop.home');
-
+Route::get('/product/{slug}',[ShopController::class,'product'])->name('front.product');
 
 // Route::get('/admin/login',[AdminLogController::class,'index'])->name('admin.login');
 Route::get('/admin/login', [AdminLogController::class, 'index'])->name('admin.login');

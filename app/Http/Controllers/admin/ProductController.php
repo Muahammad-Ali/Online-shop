@@ -179,8 +179,11 @@ public function update(Request $request, $id)
     $product->status = $request->status;
     $product->category_id = $request->category;
     $product->sub_category_id = $request->sub_category;
+    $product->shipping_returns = $request->shipping_returns;
+    $product->short_description = $request->short_description;
     $product->brand_id = $request->brand;
     $product->is_featured = $request->is_featured;
+
 
     // Save the updated product in the database
     $product->save();
