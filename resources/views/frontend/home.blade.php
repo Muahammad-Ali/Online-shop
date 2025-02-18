@@ -102,12 +102,12 @@
         <div class="section-title">
             <h2>Categories</h2>
         </div>
-        <div class="row pb-3">
+        <div class="row pb-3 ">
             @if (getCategories()->isNotEmpty())
             @foreach ( getCategories() as $category )
             <div class="col-lg-3">
                 <div class="cat-card">
-                    <div class="left">
+                    <div class="left ">
 
                         @if($category->image != "")
 
@@ -145,7 +145,7 @@
             <div class="col-md-3">
                 <div class="card product-card">
                     <div class="product-image position-relative">
-                        <a href="" class="product-img">
+                        <a href="{{route("front.product",$product->slug)}}" class="product-img">
 
                             {{-- <img class="card-img-top"src="{{asset('front-assets/images/product-1.jpg')}}" alt=""> --}}
                             @if (!empty($productImage->image))
@@ -199,7 +199,7 @@
             <div class="col-md-3">
                 <div class="card product-card">
                     <div class="product-image position-relative">
-                        <a href="" class="product-img">
+                        <a href="{{route("front.product",$product->slug)}}" class="product-img">
 
                             {{-- <img class="card-img-top"src="{{asset('front-assets/images/product-1.jpg')}}" alt=""> --}}
                             @if (!empty($productImage->image))

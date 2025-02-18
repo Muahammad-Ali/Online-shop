@@ -6,7 +6,7 @@
         <div class="container">
             <div class="light-font">
                 <ol class="breadcrumb primary-color mb-0">
-                    <li class="breadcrumb-item"><a class="white-text" href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a class="white-text" href=" {{route('front.home')}}">Home</a></li>
                     <li class="breadcrumb-item active">Shop</li>
                 </ol>
             </div>
@@ -16,7 +16,7 @@
     <section class="section-6 pt-5">
         <div class="container">
             <div class="row">
-                <div class="col-md-3 sidebar">
+                <div class="col-md-3 sidebar">      
                     <div class="sub-title">
                         <h2>Categories</h2>
                     </div>
