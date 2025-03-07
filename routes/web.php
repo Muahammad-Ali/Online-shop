@@ -32,6 +32,9 @@ Route::get('/', [FrontController::class,'index'])->name('front.home');
 Route::get('/shop/{categorySlug?}/{subCategorySlug?}', [ShopController::class,'index'])->name('shop.home');
 Route::get('/product/{slug}',[ShopController::class,'product'])->name('front.product');
 
+
+
+
 // Route::get('/admin/login',[AdminLogController::class,'index'])->name('admin.login');
 Route::get('/admin/login', [AdminLogController::class, 'index'])->name('admin.login');
 
@@ -93,7 +96,7 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/products/{id}/edit', [ProductController::class, 'edit'])->name('products.edit');
         Route::put('/products/{id}', [ProductController::class, 'update'])->name('products.update');
         Route::delete('/products/{id}', [ProductController::class, 'destroy'])->name('products.destroy');
-
+        Route::get('/get-products', [ProductController::class,'getProducts'])->name('products.getProducts');
 
 
 

@@ -43,12 +43,20 @@
                                             <p class="error"></p>
                                         </div>
                                     </div>
+                                    <div class="mb-3">
+                                        <label for="short_description">short_description</label>
+                                        <textarea name="short_description" id="short_description" class="summernote"></textarea>
+                                    </div>
                                     <div class="col-md-12">
                                         <div class="mb-3">
                                             <label for="description">Description</label>
                                             <textarea name="description" id="description" cols="30" rows="10" class="summernote"
                                                 placeholder="Description"></textarea>
                                         </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="shipping_returns">shipping_returns</label>
+                                        <textarea name="shipping_returns" id="shipping_returns" class="summernote"></textarea>
                                     </div>
                                 </div>
                             </div>

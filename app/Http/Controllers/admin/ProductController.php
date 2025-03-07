@@ -77,6 +77,8 @@ class ProductController extends Controller
             $products->sub_category_id = $request->sub_category;
             $products->brand_id = $request->brand;
             $products->is_featured = $request->is_featured;
+            $products->shipping_returns = $request->shipping_returns;
+            $products->short_description = $request->short_description;
             $products->save();
 
             if (!empty($request->image_array)) {
@@ -143,6 +145,8 @@ class ProductController extends Controller
 }
 public function update(Request $request, $id)
 {
+    // dd($request->all());
+
     $rules = [
         "title" => "required",
         "slug" => "required|unique:products,slug,$id",
@@ -206,4 +210,24 @@ public function destroy($id)
     return redirect()->route('products.index');
 }
 
+
+public function getProducts(Request $request){
+    $tempProduct = [];
+
+    if($request->term != ""){
+        $products = Product::where('title', 'LIKE', '%'.$request->term.'%')->get();
+
+        if($products->isNotEmpty()){  // Use Laravel's collection check
+            foreach($products as $product){
+                $tempProduct[] = [
+                    'id' => $product->id,
+                    'text' => $product->title  // Ensure correct field is used
+                ];
+            }
+        }
+    }
+
+    return response()->json(['tags' => $tempProduct]); // Return JSON response
 }
+
+    }
